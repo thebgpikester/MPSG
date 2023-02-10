@@ -26,7 +26,7 @@ Birth:HandleEvent( EVENTS.Birth )
 function Birth:OnEventBirth( EventData )
   local slotID = nil
   local player = EventData.IniPlayerName
-  if player ~= nil or '' then
+  if player ~= nil or player == '' then
     local slotID = MPSGPlayerId(player)
       if slotID == nil then
         env.info("The MPSG script is not running on a server, slotID cannot be returned.")
